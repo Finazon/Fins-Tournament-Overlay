@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="style.css">
+  <script src="scripts.js"></script>
+  <style>
+    body {
+        color:white;
+        background-color: black;
+    }
+  </style>
+</head>
+<body>
+    <div>
+        <label for="toruney">Tournament:</label>
+        <input class="currbox" id="tourney" type="text">
+        <img />
+        <label for="round">Round:</label>
+        <input class="currbox" id="round" type="text">
+    </div>
+    <img />
+    <img />
+    <div>
+        <label for="comm1">Commentator 1:</label>
+        <input class="currbox" id="comm1" type="text">
+        <img />
+        <label for="comm2">Commentator 2:</label>
+        <input class="currbox" id="comm2" type="text">
+    </div>
+    <img />
+    <img />
+    <div>
+        <label for="player1">Player 1:</label>
+        <input class="currbox" id="player1" type="text">
+        <img />
+        <label for="player2">Player 2:</label>
+        <input class="currbox" id="player2" type="text">
+    </div>
+    <img />
+    <div>
+        Set Length: 
+        <select name="Set Type" id="getset">
+            <option value="Bo1">1 Game</option>
+            <option value="Bo3">3 Games</option>
+            <option value="Bo5">5 Games</option>
+            <option value="Bo7">7 Games</option>
+            <option value="Bo9">9 Games</option>
+        </select>
+        <input type="button" value="set type" class="basic" onclick="updateControls()">
+    </div>
+    <img />
+    <div id="games">
+
+    </div>
+    <img />
+    <div>
+        <label for="score1">Score Player 1:</label>
+        <input class="currbox" id="score1" type="text">
+        <img />
+        <label for="score2">Score Player 2:</label>
+        <input class="currbox" id="score2" type="text">
+    </div>
+    <img />
+    <img />
+    <div>
+        <input type="button" value="Submit" class="basic" onclick="updateData()">
+    </div>
+</body>
