@@ -558,7 +558,7 @@ function setInter(){
             </div>
             `
         }
-        else if(wn21== "Player 2"){
+        else if(wn1 == "Player 2"){
             document.getElementById("content3").innerHTML = `
             <div style="width:263px;height:500px;scale:1.5;position:absolute;top:360px;right:822px">
             <image src="assets/stages/${map1}.png" id="stageIMGA">
