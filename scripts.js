@@ -34,20 +34,6 @@ function updateControls(){
       const game_two_plus_stages = game_one_stages.concat(['Counterpick']);
       const game_two_plus_modes = game_one_modes.concat(['counter']);
       
-      function mode_name(name) {
-        switch (name) {
-          case 'turf':
-            return 'Turf War';
-            break;
-          case 'zones':
-            return 'Splat Zones'
-            break;
-          default:
-            return 'ERROR DEFAULT NAME';
-            break;
-        }
-      }
-      
       function build_select(name, id, items) {
         start = `<select name="${name}" id="${id}">`;
         mid = ``;
