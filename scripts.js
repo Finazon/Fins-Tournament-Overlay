@@ -1,4 +1,5 @@
 function updateControls(){
+    //Sets Admin Panel to show N stages
     var list = document.getElementById("getset")
     var length = list.value
     if(length == 'Bo1'){
@@ -29,6 +30,7 @@ function updateControls(){
                 <option value="Sturgeon Shipyard">Sturgeon Shipyard</option>
                 <option value="Um'ami Ruins">Um'ami Ruins</option>
                 <option value="Undertow Spillway">Undertow Spillway</option>
+                <option value="Urchin Underpass">Urchin Underpass</option>
                 <option value="Wahoo World">Wahoo World</option>
             </select>
             <select name="Game 1 Mode" id="modeg1">
@@ -74,6 +76,7 @@ function updateControls(){
                     <option value="Sturgeon Shipyard">Sturgeon Shipyard</option>
                     <option value="Um'ami Ruins">Um'ami Ruins</option>
                     <option value="Undertow Spillway">Undertow Spillway</option>
+                    <option value="Urchin Underpass">Urchin Underpass</option>
                     <option value="Wahoo World">Wahoo World</option>
                 </select>
                 <select name="Game 1 Mode" id="modeg1">
@@ -117,6 +120,7 @@ function updateControls(){
                     <option value="Sturgeon Shipyard">Sturgeon Shipyard</option>
                     <option value="Um'ami Ruins">Um'ami Ruins</option>
                     <option value="Undertow Spillway">Undertow Spillway</option>
+                    <option value="Urchin Underpass">Urchin Underpass</option>
                     <option value="Wahoo World">Wahoo World</option>
                 </select>
                 <select name="Game 2 Mode" id="modeg2">
@@ -161,6 +165,7 @@ function updateControls(){
                     <option value="Sturgeon Shipyard">Sturgeon Shipyard</option>
                     <option value="Um'ami Ruins">Um'ami Ruins</option>
                     <option value="Undertow Spillway">Undertow Spillway</option>
+                    <option value="Urchin Underpass">Urchin Underpass</option>
                     <option value="Wahoo World">Wahoo World</option>
                 </select>
                 <select name="Game 3 Mode" id="modeg3">
@@ -208,6 +213,7 @@ function updateControls(){
                 <option value="Sturgeon Shipyard">Sturgeon Shipyard</option>
                 <option value="Um'ami Ruins">Um'ami Ruins</option>
                 <option value="Undertow Spillway">Undertow Spillway</option>
+                <option value="Urchin Underpass">Urchin Underpass</option>
                 <option value="Wahoo World">Wahoo World</option>
             </select>
             <select name="Game 1 Mode" id="modeg1">
@@ -251,6 +257,7 @@ function updateControls(){
                 <option value="Sturgeon Shipyard">Sturgeon Shipyard</option>
                 <option value="Um'ami Ruins">Um'ami Ruins</option>
                 <option value="Undertow Spillway">Undertow Spillway</option>
+                <option value="Urchin Underpass">Urchin Underpass</option>
                 <option value="Wahoo World">Wahoo World</option>
             </select>
             <select name="Game 2 Mode" id="modeg2">
@@ -295,6 +302,7 @@ function updateControls(){
                 <option value="Sturgeon Shipyard">Sturgeon Shipyard</option>
                 <option value="Um'ami Ruins">Um'ami Ruins</option>
                 <option value="Undertow Spillway">Undertow Spillway</option>
+                <option value="Urchin Underpass">Urchin Underpass</option>
                 <option value="Wahoo World">Wahoo World</option>
             </select>
             <select name="Game 3 Mode" id="modeg3">
@@ -339,6 +347,7 @@ function updateControls(){
                 <option value="Sturgeon Shipyard">Sturgeon Shipyard</option>
                 <option value="Um'ami Ruins">Um'ami Ruins</option>
                 <option value="Undertow Spillway">Undertow Spillway</option>
+                <option value="Urchin Underpass">Urchin Underpass</option>
                 <option value="Wahoo World">Wahoo World</option>
             </select>
             <select name="Game 4 Mode" id="modeg4">
@@ -383,6 +392,7 @@ function updateControls(){
                 <option value="Sturgeon Shipyard">Sturgeon Shipyard</option>
                 <option value="Um'ami Ruins">Um'ami Ruins</option>
                 <option value="Undertow Spillway">Undertow Spillway</option>
+                <option value="Urchin Underpass">Urchin Underpass</option>
                 <option value="Wahoo World">Wahoo World</option>
             </select>
             <select name="Game 5 Mode" id="modeg5">
@@ -411,6 +421,7 @@ function updateControls(){
 }
 
 function updateData(){
+    //sends data to overlays/stores data
     if(document.getElementById("getset").value == "Bo1"){
         window.localStorage.setItem("setLength", `${document.getElementById("getset").value}`)
         window.localStorage.setItem("stage1", `${document.getElementById("stageg1").value}`)
@@ -501,6 +512,7 @@ function update3(){
 }
 
 function setOverlayData(){
+    //Sets all info for the In-Game Overlay
     var p1 = window.localStorage.getItem("player1")
     var p2 = window.localStorage.getItem("player2")
     var s1 = window.localStorage.getItem("score1")
@@ -516,6 +528,7 @@ function setOverlayData(){
 }
 
 function setInter(){
+    // sets intermission page data
     var map1 = window.localStorage.stage1
     var map2 = window.localStorage.stage2
     var map3 = window.localStorage.stage3
