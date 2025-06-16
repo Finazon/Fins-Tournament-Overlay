@@ -1,428 +1,100 @@
 function updateControls(){
     //Sets Admin Panel to show N stages
     var list = document.getElementById("getset")
-    var length = list.value
-    if(length == 'Bo1'){
-        document.getElementById('games').innerHTML = `
-        <div>
-            Game 1: 
-            <select name="Game 1 Stage" id="stageg1">
-                <option value="Barnacle & Dime">Barnacle & Dime</option>
-                <option value="Bluefin Depot">Bluefin Depot</option>
-                <option value="Brinewater Springs">Brinewater Springs</option>
-                <option value="Crableg Capital">Crableg Capital</option>
-                <option value="Eeltail Alley">Eeltail Alley</option>
-                <option value="Flounder Heights">Flounder Heights</option>
-                <option value="Hagglefish Market">Hagglefish Market</option>
-                <option value="Hammerhead Bridge">Hammerhead Bridge</option>
-                <option value="Humpback Pump Track">Humpback Pump Track</option>
-                <option value="Inkblot Art Academy">Inkblot Art Academy</option>
-                <option value="Lemuria Hub">Lemuria Hub</option>
-                <option value="Mahi-Mahi Resort">Mahi-Mahi Resort</option>
-                <option value="MakoMart">MakoMart</option>
-                <option value="Manta Maria">Manta Maria</option>
-                <option value="Marlin Airport">Marlin Airport</option>
-                <option value="Minecmeat Metalworks">Minecmeat Metalworks</option>
-                <option value="Museum d'Alfonsino">Museum d'Alfonsino</option>
-                <option value="Robo ROM-en">Robo ROM-en</option>
-                <option value="Scorch Gorge">Scorch Gorge</option>
-                <option value="Shipshape Cargo Co.">Shipshape Cargo Co.</option>
-                <option value="Sturgeon Shipyard">Sturgeon Shipyard</option>
-                <option value="Um'ami Ruins">Um'ami Ruins</option>
-                <option value="Undertow Spillway">Undertow Spillway</option>
-                <option value="Urchin Underpass">Urchin Underpass</option>
-                <option value="Wahoo World">Wahoo World</option>
-            </select>
-            <select name="Game 1 Mode" id="modeg1">
-                <option value="turf">Turf War</option>
-                <option value="zones">Splat Zones</option>
-                <option value="tower">Tower Control</option>
-                <option value="rain">Rainmaker</option>
-                <option value="clam">Clam Blitz</option>
-            </select>
-            <select name="Game 1 Winner" id="wing1">
-                <option value="Unknown">N/A</option>
-                <option value="Player 1">Player 1</option>
-                <option value="Player 2">Player 2</option>
-            </select>
-        </div>
-        `
-    }
-    else if(length == 'Bo3'){
-        document.getElementById('games').innerHTML = `
-            <div>
-                Game 1: 
-                <select name="Game 1 Stage" id="stageg1">
-                    <option value="Barnacle & Dime">Barnacle & Dime</option>
-                    <option value="Bluefin Depot">Bluefin Depot</option>
-                    <option value="Brinewater Springs">Brinewater Springs</option>
-                    <option value="Crableg Capital">Crableg Capital</option>
-                    <option value="Eeltail Alley">Eeltail Alley</option>
-                    <option value="Flounder Heights">Flounder Heights</option>
-                    <option value="Hagglefish Market">Hagglefish Market</option>
-                    <option value="Hammerhead Bridge">Hammerhead Bridge</option>
-                    <option value="Humpback Pump Track">Humpback Pump Track</option>
-                    <option value="Inkblot Art Academy">Inkblot Art Academy</option>
-                    <option value="Lemuria Hub">Lemuria Hub</option>
-                    <option value="Mahi-Mahi Resort">Mahi-Mahi Resort</option>
-                    <option value="MakoMart">MakoMart</option>
-                    <option value="Manta Maria">Manta Maria</option>
-                    <option value="Marlin Airport">Marlin Airport</option>
-                    <option value="Minecmeat Metalworks">Minecmeat Metalworks</option>
-                    <option value="Museum d'Alfonsino">Museum d'Alfonsino</option>
-                    <option value="Robo ROM-en">Robo ROM-en</option>
-                    <option value="Scorch Gorge">Scorch Gorge</option>
-                    <option value="Shipshape Cargo Co.">Shipshape Cargo Co.</option>
-                    <option value="Sturgeon Shipyard">Sturgeon Shipyard</option>
-                    <option value="Um'ami Ruins">Um'ami Ruins</option>
-                    <option value="Undertow Spillway">Undertow Spillway</option>
-                    <option value="Urchin Underpass">Urchin Underpass</option>
-                    <option value="Wahoo World">Wahoo World</option>
-                </select>
-                <select name="Game 1 Mode" id="modeg1">
-                    <option value="turf">Turf War</option>
-                    <option value="zones">Splat Zones</option>
-                    <option value="tower">Tower Control</option>
-                    <option value="rain">Rainmaker</option>
-                    <option value="clam">Clam Blitz</option>
-                </select>
-                <select name="Game 1 Winner" id="wing1">
-                    <option value="Unknown">N/A</option>
-                    <option value="Player 1">Player 1</option>
-                    <option value="Player 2">Player 2</option>
-                </select>
-            </div>
-            <img />
-            <div>
-                Game 2: 
-                <select name="Game 2 Stage" id="stageg2">
-                    <option value="Counterpick">Counterpick</option>
-                    <option value="Barnacle & Dime">Barnacle & Dime</option>
-                    <option value="Bluefin Depot">Bluefin Depot</option>
-                    <option value="Brinewater Springs">Brinewater Springs</option>
-                    <option value="Crableg Capital">Crableg Capital</option>
-                    <option value="Eeltail Alley">Eeltail Alley</option>
-                    <option value="Flounder Heights">Flounder Heights</option>
-                    <option value="Hagglefish Market">Hagglefish Market</option>
-                    <option value="Hammerhead Bridge">Hammerhead Bridge</option>
-                    <option value="Humpback Pump Track">Humpback Pump Track</option>
-                    <option value="Inkblot Art Academy">Inkblot Art Academy</option>
-                    <option value="Lemuria Hub">Lemuria Hub</option>
-                    <option value="Mahi-Mahi Resort">Mahi-Mahi Resort</option>
-                    <option value="MakoMart">MakoMart</option>
-                    <option value="Manta Maria">Manta Maria</option>
-                    <option value="Marlin Airport">Marlin Airport</option>
-                    <option value="Minecmeat Metalworks">Minecmeat Metalworks</option>
-                    <option value="Museum d'Alfonsino">Museum d'Alfonsino</option>
-                    <option value="Robo ROM-en">Robo ROM-en</option>
-                    <option value="Scorch Gorge">Scorch Gorge</option>
-                    <option value="Shipshape Cargo Co.">Shipshape Cargo Co.</option>
-                    <option value="Sturgeon Shipyard">Sturgeon Shipyard</option>
-                    <option value="Um'ami Ruins">Um'ami Ruins</option>
-                    <option value="Undertow Spillway">Undertow Spillway</option>
-                    <option value="Urchin Underpass">Urchin Underpass</option>
-                    <option value="Wahoo World">Wahoo World</option>
-                </select>
-                <select name="Game 2 Mode" id="modeg2">
-                    <option value="turf">Turf War</option>
-                    <option value="zones">Splat Zones</option>
-                    <option value="tower">Tower Control</option>
-                    <option value="rain">Rainmaker</option>
-                    <option value="clam">Clam Blitz</option>
-                    <option value="counter">Counterpick</option>
-                </select>
-                <select name="Game 2 Winner" id="wing2">
-                    <option value="Unknown">N/A</option>
-                    <option value="Player 1">Player 1</option>
-                    <option value="Player 2">Player 2</option>
-                </select>
-            </div>
-            <img />
-            <div>
-                Game 3: 
-                <select name="Game 3 Stage" id="stageg3">
-                    <option value="Counterpick">Counterpick</option>
-                    <option value="Barnacle & Dime">Barnacle & Dime</option>
-                    <option value="Bluefin Depot">Bluefin Depot</option>
-                    <option value="Brinewater Springs">Brinewater Springs</option>
-                    <option value="Crableg Capital">Crableg Capital</option>
-                    <option value="Eeltail Alley">Eeltail Alley</option>
-                    <option value="Flounder Heights">Flounder Heights</option>
-                    <option value="Hagglefish Market">Hagglefish Market</option>
-                    <option value="Hammerhead Bridge">Hammerhead Bridge</option>
-                    <option value="Humpback Pump Track">Humpback Pump Track</option>
-                    <option value="Inkblot Art Academy">Inkblot Art Academy</option>
-                    <option value="Lemuria Hub">Lemuria Hub</option>
-                    <option value="Mahi-Mahi Resort">Mahi-Mahi Resort</option>
-                    <option value="MakoMart">MakoMart</option>
-                    <option value="Manta Maria">Manta Maria</option>
-                    <option value="Marlin Airport">Marlin Airport</option>
-                    <option value="Minecmeat Metalworks">Minecmeat Metalworks</option>
-                    <option value="Museum d'Alfonsino">Museum d'Alfonsino</option>
-                    <option value="Robo ROM-en">Robo ROM-en</option>
-                    <option value="Scorch Gorge">Scorch Gorge</option>
-                    <option value="Shipshape Cargo Co.">Shipshape Cargo Co.</option>
-                    <option value="Sturgeon Shipyard">Sturgeon Shipyard</option>
-                    <option value="Um'ami Ruins">Um'ami Ruins</option>
-                    <option value="Undertow Spillway">Undertow Spillway</option>
-                    <option value="Urchin Underpass">Urchin Underpass</option>
-                    <option value="Wahoo World">Wahoo World</option>
-                </select>
-                <select name="Game 3 Mode" id="modeg3">
-                    <option value="turf">Turf War</option>
-                    <option value="zones">Splat Zones</option>
-                    <option value="tower">Tower Control</option>
-                    <option value="rain">Rainmaker</option>
-                    <option value="clam">Clam Blitz</option>
-                    <option value="counter">Counterpick</option>
-                </select>
-                <select name="Game 3 Winner" id="wing3">
-                    <option value="Unknown">N/A</option>
-                    <option value="Player 1">Player 1</option>
-                    <option value="Player 2">Player 2</option>
-                </select>
-            </div>
-            <img />
-        `
-    }
-    else if(length == 'Bo5'){
-        document.getElementById('games').innerHTML = `
-        <div>
-            Game 1: 
-            <select name="Game 1 Stage" id="stageg1">
-                <option value="Barnacle & Dime">Barnacle & Dime</option>
-                <option value="Bluefin Depot">Bluefin Depot</option>
-                <option value="Brinewater Springs">Brinewater Springs</option>
-                <option value="Crableg Capital">Crableg Capital</option>
-                <option value="Eeltail Alley">Eeltail Alley</option>
-                <option value="Flounder Heights">Flounder Heights</option>
-                <option value="Hagglefish Market">Hagglefish Market</option>
-                <option value="Hammerhead Bridge">Hammerhead Bridge</option>
-                <option value="Humpback Pump Track">Humpback Pump Track</option>
-                <option value="Inkblot Art Academy">Inkblot Art Academy</option>
-                <option value="Lemuria Hub">Lemuria Hub</option>
-                <option value="Mahi-Mahi Resort">Mahi-Mahi Resort</option>
-                <option value="MakoMart">MakoMart</option>
-                <option value="Manta Maria">Manta Maria</option>
-                <option value="Marlin Airport">Marlin Airport</option>
-                <option value="Minecmeat Metalworks">Minecmeat Metalworks</option>
-                <option value="Museum d'Alfonsino">Museum d'Alfonsino</option>
-                <option value="Robo ROM-en">Robo ROM-en</option>
-                <option value="Scorch Gorge">Scorch Gorge</option>
-                <option value="Shipshape Cargo Co.">Shipshape Cargo Co.</option>
-                <option value="Sturgeon Shipyard">Sturgeon Shipyard</option>
-                <option value="Um'ami Ruins">Um'ami Ruins</option>
-                <option value="Undertow Spillway">Undertow Spillway</option>
-                <option value="Urchin Underpass">Urchin Underpass</option>
-                <option value="Wahoo World">Wahoo World</option>
-            </select>
-            <select name="Game 1 Mode" id="modeg1">
-                <option value="turf">Turf War</option>
-                <option value="zones">Splat Zones</option>
-                <option value="tower">Tower Control</option>
-                <option value="rain">Rainmaker</option>
-                <option value="clam">Clam Blitz</option>
-            </select>
-            <select name="Game 1 Winner" id="wing1">
-                <option value="Unknown">N/A</option>
-                <option value="Player 1">Player 1</option>
-                <option value="Player 2">Player 2</option>
-            </select>
-        </div>
-        <img />
-        <div>
-            Game 2: 
-            <select name="Game 2 Stage" id="stageg2">
-                <option value="Counterpick">Counterpick</option>
-                <option value="Barnacle & Dime">Barnacle & Dime</option>
-                <option value="Bluefin Depot">Bluefin Depot</option>
-                <option value="Brinewater Springs">Brinewater Springs</option>
-                <option value="Crableg Capital">Crableg Capital</option>
-                <option value="Eeltail Alley">Eeltail Alley</option>
-                <option value="Flounder Heights">Flounder Heights</option>
-                <option value="Hagglefish Market">Hagglefish Market</option>
-                <option value="Hammerhead Bridge">Hammerhead Bridge</option>
-                <option value="Humpback Pump Track">Humpback Pump Track</option>
-                <option value="Inkblot Art Academy">Inkblot Art Academy</option>
-                <option value="Lemuria Hub">Lemuria Hub</option>
-                <option value="Mahi-Mahi Resort">Mahi-Mahi Resort</option>
-                <option value="MakoMart">MakoMart</option>
-                <option value="Manta Maria">Manta Maria</option>
-                <option value="Marlin Airport">Marlin Airport</option>
-                <option value="Minecmeat Metalworks">Minecmeat Metalworks</option>
-                <option value="Museum d'Alfonsino">Museum d'Alfonsino</option>
-                <option value="Robo ROM-en">Robo ROM-en</option>
-                <option value="Scorch Gorge">Scorch Gorge</option>
-                <option value="Shipshape Cargo Co.">Shipshape Cargo Co.</option>
-                <option value="Sturgeon Shipyard">Sturgeon Shipyard</option>
-                <option value="Um'ami Ruins">Um'ami Ruins</option>
-                <option value="Undertow Spillway">Undertow Spillway</option>
-                <option value="Urchin Underpass">Urchin Underpass</option>
-                <option value="Wahoo World">Wahoo World</option>
-            </select>
-            <select name="Game 2 Mode" id="modeg2">
-                <option value="turf">Turf War</option>
-                <option value="zones">Splat Zones</option>
-                <option value="tower">Tower Control</option>
-                <option value="rain">Rainmaker</option>
-                <option value="clam">Clam Blitz</option>
-                <option value="counter">Counterpick</option>
-            </select>
-            <select name="Game 2 Winner" id="wing2">
-                <option value="Unknown">N/A</option>
-                <option value="Player 1">Player 1</option>
-                <option value="Player 2">Player 2</option>
-            </select>
-        </div>
-        <img />
-        <div>
-            Game 3: 
-            <select name="Game 3 Stage" id="stageg3">
-                <option value="Counterpick">Counterpick</option>
-                <option value="Barnacle & Dime">Barnacle & Dime</option>
-                <option value="Bluefin Depot">Bluefin Depot</option>
-                <option value="Brinewater Springs">Brinewater Springs</option>
-                <option value="Crableg Capital">Crableg Capital</option>
-                <option value="Eeltail Alley">Eeltail Alley</option>
-                <option value="Flounder Heights">Flounder Heights</option>
-                <option value="Hagglefish Market">Hagglefish Market</option>
-                <option value="Hammerhead Bridge">Hammerhead Bridge</option>
-                <option value="Humpback Pump Track">Humpback Pump Track</option>
-                <option value="Inkblot Art Academy">Inkblot Art Academy</option>
-                <option value="Lemuria Hub">Lemuria Hub</option>
-                <option value="Mahi-Mahi Resort">Mahi-Mahi Resort</option>
-                <option value="MakoMart">MakoMart</option>
-                <option value="Manta Maria">Manta Maria</option>
-                <option value="Marlin Airport">Marlin Airport</option>
-                <option value="Minecmeat Metalworks">Minecmeat Metalworks</option>
-                <option value="Museum d'Alfonsino">Museum d'Alfonsino</option>
-                <option value="Robo ROM-en">Robo ROM-en</option>
-                <option value="Scorch Gorge">Scorch Gorge</option>
-                <option value="Shipshape Cargo Co.">Shipshape Cargo Co.</option>
-                <option value="Sturgeon Shipyard">Sturgeon Shipyard</option>
-                <option value="Um'ami Ruins">Um'ami Ruins</option>
-                <option value="Undertow Spillway">Undertow Spillway</option>
-                <option value="Urchin Underpass">Urchin Underpass</option>
-                <option value="Wahoo World">Wahoo World</option>
-            </select>
-            <select name="Game 3 Mode" id="modeg3">
-                <option value="turf">Turf War</option>
-                <option value="zones">Splat Zones</option>
-                <option value="tower">Tower Control</option>
-                <option value="rain">Rainmaker</option>
-                <option value="clam">Clam Blitz</option>
-                <option value="counter">Counterpick</option>
-            </select>
-            <select name="Game 3 Winner" id="wing3">
-                <option value="Unknown">N/A</option>
-                <option value="Player 1">Player 1</option>
-                <option value="Player 2">Player 2</option>
-            </select>
-        </div>
-        <img />
-        <div>
-            Game 4: 
-            <select name="Game 4 Stage" id="stageg4">
-                <option value="Counterpick">Counterpick</option>
-                <option value="Barnacle & Dime">Barnacle & Dime</option>
-                <option value="Bluefin Depot">Bluefin Depot</option>
-                <option value="Brinewater Springs">Brinewater Springs</option>
-                <option value="Crableg Capital">Crableg Capital</option>
-                <option value="Eeltail Alley">Eeltail Alley</option>
-                <option value="Flounder Heights">Flounder Heights</option>
-                <option value="Hagglefish Market">Hagglefish Market</option>
-                <option value="Hammerhead Bridge">Hammerhead Bridge</option>
-                <option value="Humpback Pump Track">Humpback Pump Track</option>
-                <option value="Inkblot Art Academy">Inkblot Art Academy</option>
-                <option value="Lemuria Hub">Lemuria Hub</option>
-                <option value="Mahi-Mahi Resort">Mahi-Mahi Resort</option>
-                <option value="MakoMart">MakoMart</option>
-                <option value="Manta Maria">Manta Maria</option>
-                <option value="Marlin Airport">Marlin Airport</option>
-                <option value="Minecmeat Metalworks">Minecmeat Metalworks</option>
-                <option value="Museum d'Alfonsino">Museum d'Alfonsino</option>
-                <option value="Robo ROM-en">Robo ROM-en</option>
-                <option value="Scorch Gorge">Scorch Gorge</option>
-                <option value="Shipshape Cargo Co.">Shipshape Cargo Co.</option>
-                <option value="Sturgeon Shipyard">Sturgeon Shipyard</option>
-                <option value="Um'ami Ruins">Um'ami Ruins</option>
-                <option value="Undertow Spillway">Undertow Spillway</option>
-                <option value="Urchin Underpass">Urchin Underpass</option>
-                <option value="Wahoo World">Wahoo World</option>
-            </select>
-            <select name="Game 4 Mode" id="modeg4">
-                <option value="turf">Turf War</option>
-                <option value="zones">Splat Zones</option>
-                <option value="tower">Tower Control</option>
-                <option value="rain">Rainmaker</option>
-                <option value="clam">Clam Blitz</option>
-                <option value="counter">Counterpick</option>
-            </select>
-            <select name="Game 4 Winner" id="wing4">
-                <option value="Unknown">N/A</option>
-                <option value="Player 1">Player 1</option>
-                <option value="Player 2">Player 2</option>
-            </select>
-        </div>
-        <img />
-        <div>
-            Game 5: 
-            <select name="Game 5 Stage" id="stageg5">
-                <option value="Counterpick">Counterpick</option>
-                <option value="Barnacle & Dime">Barnacle & Dime</option>
-                <option value="Bluefin Depot">Bluefin Depot</option>
-                <option value="Brinewater Springs">Brinewater Springs</option>
-                <option value="Crableg Capital">Crableg Capital</option>
-                <option value="Eeltail Alley">Eeltail Alley</option>
-                <option value="Flounder Heights">Flounder Heights</option>
-                <option value="Hagglefish Market">Hagglefish Market</option>
-                <option value="Hammerhead Bridge">Hammerhead Bridge</option>
-                <option value="Humpback Pump Track">Humpback Pump Track</option>
-                <option value="Inkblot Art Academy">Inkblot Art Academy</option>
-                <option value="Lemuria Hub">Lemuria Hub</option>
-                <option value="Mahi-Mahi Resort">Mahi-Mahi Resort</option>
-                <option value="MakoMart">MakoMart</option>
-                <option value="Manta Maria">Manta Maria</option>
-                <option value="Marlin Airport">Marlin Airport</option>
-                <option value="Minecmeat Metalworks">Minecmeat Metalworks</option>
-                <option value="Museum d'Alfonsino">Museum d'Alfonsino</option>
-                <option value="Robo ROM-en">Robo ROM-en</option>
-                <option value="Scorch Gorge">Scorch Gorge</option>
-                <option value="Shipshape Cargo Co.">Shipshape Cargo Co.</option>
-                <option value="Sturgeon Shipyard">Sturgeon Shipyard</option>
-                <option value="Um'ami Ruins">Um'ami Ruins</option>
-                <option value="Undertow Spillway">Undertow Spillway</option>
-                <option value="Urchin Underpass">Urchin Underpass</option>
-                <option value="Wahoo World">Wahoo World</option>
-            </select>
-            <select name="Game 5 Mode" id="modeg5">
-                <option value="turf">Turf War</option>
-                <option value="zones">Splat Zones</option>
-                <option value="tower">Tower Control</option>
-                <option value="rain">Rainmaker</option>
-                <option value="clam">Clam Blitz</option>
-                <option value="counter">Counterpick</option>
-            </select>
-            <select name="Game 5 Winner" id="wing5">
-                <option value="Unknown">N/A</option>
-                <option value="Player 1">Player 1</option>
-                <option value="Player 2">Player 2</option>
-            </select>
-        </div>
-        <img />
-    `
-    }
-    else if(length == 'Bo7'){
-        document.getElementById('games').innerHTML = `Not yet Available`
-    }
-    else if(length == 'Bo9'){
-        document.getElementById('games').innerHTML = `Not yet Available`
-    }
+    var list = list.value
+    const game_one_stages = [
+        'Barnacle & Dime',
+        'Bluefin Depot',
+        'Brinewater Springs',
+        'Crableg Capital',
+        'Eeltail Alley',
+        'Flounder Heights',
+        'Hagglefish Market',
+        'Hammerhead Bridge',
+        'Humpback Pump Track',
+        'Inkblot Art Academy',
+        'Lemuria Hub',
+        'Mahi-Mahi Resort',
+        'MakoMart',
+        'Manta Maria',
+        'Marlin Airport',
+        'Minecmeat Metalworks',
+        "Museum d'Alfonsino",
+        'Robo ROM-en',
+        'Scorch Gorge',
+        'Shipshape Cargo Co.',
+        'Sturgeon Shipyard',
+        "Um'ami Ruins",
+        'Undertow Spillway',
+        'Urchin Underpass',
+        'Wahoo World',
+      ];
+      const game_one_modes = ['turf', 'zones', 'tower', 'rain', 'clam'];
+      const players = [`Unknown`, `Player 1`, `Player 2`];
+      const game_two_plus_stages = game_one_stages.concat(['Counterpick']);
+      const game_two_plus_modes = game_one_modes.concat(['counter']);
+      
+      function mode_name(name) {
+        switch (name) {
+          case 'turf':
+            return 'Turf War';
+            break;
+          case 'zones':
+            return 'Splat Zones'
+            break;
+          default:
+            return 'ERROR DEFAULT NAME';
+            break;
+        }
+      }
+      
+      function build_select(name, id, items) {
+        start = `<select name="${name}" id="${id}">`;
+        mid = ``;
+        end = `</select>`;
+        for (let i in items) {
+          mid += `<option value="${items[i]}">${items[i]}</option>`;
+        }
+        return start + mid + end;
+      }
+      
+      let stages = [];
+      let modes = [];
+      let wings = [];
+      
+      for (let i = 0; i < 9; i++) {
+        let stage_list;
+        let mode_list;
+        if (i === 0) {
+          stage_list = game_one_stages;
+          mode_list = game_one_modes;
+        } else {
+          stage_list = game_two_plus_stages;
+          mode_list = game_two_plus_modes;
+        }
+        stages[i] = build_select(`Game ${i + 1} Stage`, `stageg${i + 1}`, stage_list);
+        modes[i] = build_select(`Game ${i + 1} Mode`, `modeg${i + 1}`, mode_list);
+        wings[i] = build_select(`Game ${i + 1} Winner`, `wing${i + 1}`, players);
+      }
+      
+      function get_games(num) {
+        let games = ``;
+        for (let i = 0; i < num; i++) {
+          games += `<div>Game ${i + 1}: ${stages[i]} ${modes[i]} ${wings[i]} </div>`;
+          if (i < num-1) {
+            games += `<img />`
+          }
+        }
+        return games;
+      }
+
+      var sterf = get_games(list)
+      document.getElementById("games").innerHTML = `${get_games(list)}`
 }
 
 function updateData(){
     //sends data to overlays/stores data
-    if(document.getElementById("getset").value == "Bo1"){
+    if(document.getElementById("getset").value == "1"){
         window.localStorage.setItem("setLength", `${document.getElementById("getset").value}`)
         window.localStorage.setItem("stage1", `${document.getElementById("stageg1").value}`)
         window.localStorage.setItem("mode1", `${document.getElementById("modeg1").value}`)
@@ -436,7 +108,7 @@ function updateData(){
         window.localStorage.setItem("comm1", `${document.getElementById('comm1').value}`)
         window.localStorage.setItem("comm2", `${document.getElementById('comm2').value}`)
     }
-    else if(document.getElementById("getset").value == "Bo3"){
+    else if(document.getElementById("getset").value == "3"){
         window.localStorage.setItem("setLength", `${document.getElementById("getset").value}`)
         window.localStorage.setItem("stage1", `${document.getElementById("stageg1").value}`)
         window.localStorage.setItem("mode1", `${document.getElementById("modeg1").value}`)
@@ -456,7 +128,7 @@ function updateData(){
         window.localStorage.setItem("comm1", `${document.getElementById('comm1').value}`)
         window.localStorage.setItem("comm2", `${document.getElementById('comm2').value}`)
     }
-    else if(document.getElementById("getset").value == "Bo5"){
+    else if(document.getElementById("getset").value == "5"){
         window.localStorage.setItem("setLength", `${document.getElementById("getset").value}`)
         window.localStorage.setItem("stage1", `${document.getElementById("stageg1").value}`)
         window.localStorage.setItem("mode1", `${document.getElementById("modeg1").value}`)
@@ -553,7 +225,7 @@ function setInter(){
     var round = window.localStorage.round
     var comm1 = window.localStorage.comm2
     var comm2 = window.localStorage.comm1
-    if(length == "Bo1"){
+    if(length == "1"){
         if(wn1 == "Unknown"){
             document.getElementById("content3").innerHTML = `
             <div style="width:263px;height:500px;scale:1.5;position:absolute;top:360px;right:822px">
@@ -581,7 +253,7 @@ function setInter(){
             `
         }
     }
-    else if(length == "Bo3"){
+    else if(length == "3"){
         if(wn1 == "Unknown"){
             document.getElementById("content2").innerHTML = `
             <div style="width:263px;height:500px;scale:1.5;position:absolute;top:360px;left:260px">
@@ -661,7 +333,7 @@ function setInter(){
             `
         }
     }
-    else if(length == "Bo5"){
+    else if(length == "5"){
         if(wn1 == "Unknown"){
             document.getElementById("content1").innerHTML = `
             <div style="width:263px;height:500px;scale:1.25;position:absolute;top:360px;left:50px">
