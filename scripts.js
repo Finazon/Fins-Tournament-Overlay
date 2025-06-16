@@ -74,7 +74,6 @@ function updateControls(){
         return games;
       }
 
-      var sterf = get_games(list)
       document.getElementById("games").innerHTML = `${get_games(list)}`
 }
 
@@ -143,30 +142,24 @@ function updateData(){
 }
 
 async function repeater(){
-    update()
+    update(1)
     setTimeout(repeater, 100)
 }
 
 async function repeater2(){
-    update2()
+    update(2)
     setTimeout(repeater2, 100)
 }
 
 async function repeater3(){
-    update3()
+    update(3)
     setTimeout(repeater3, 100)
 }
 
-function update(){
-    setOverlayData()
-}
-
-function update2(){
-    setInter()
-}
-
-function update3(){
-    setWaiting()
+function update(num){
+    if(num == 1) return setOverlayData()
+    else if(num == 2) return setInter()
+    else if(num == 3) return setWaiting()
 }
 
 function setOverlayData(){
@@ -470,24 +463,8 @@ function setWaiting(){
     <p style="font-family:Splatoon1;font-size:50px;position:absolute;top:98px;right:443px;text-align:center;width:1000px">${round}</p>`
 }
 
-function setCards1(){
-   document.getElementById("content1").classList.toggle('start')
-}
-
-function setCards2(){
-    document.getElementById("content2").classList.toggle('start')
-}
-
-function setCards3(){
-    document.getElementById("content3").classList.toggle('start')
-}
-
-function setCards4(){
-    document.getElementById("content4").classList.toggle('start')
-}
-
-function setCards5(){
-    document.getElementById("content5").classList.toggle('start')
+function setCards(num){
+   document.getElementById(`content${num}`).classList.toggle('start')
 }
 
 function setBoard(){
